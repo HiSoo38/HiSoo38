@@ -138,13 +138,6 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/github-snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/github-snake.svg" alt="contribution snake" />
-  </picture>
-</p>
-
-<p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=HiSoo38&theme=tokyonight" alt="profile details" />
 </p>
 

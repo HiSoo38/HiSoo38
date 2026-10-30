@@ -1,4 +1,4 @@
-# README 의 GitHub Activity 칸에 쓰는 SVG(3D 잔디 · 잔디 먹는 뱀)를 만들어 output 브랜치에 올린다
+# README 의 GitHub Activity 칸에 쓰는 3D 잔디 SVG 를 만들어 output 브랜치에 올린다
 name: Generate profile assets
 
 on:
@@ -22,19 +22,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      # 잔디 먹는 뱀 — dist/ 로 나온다
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-
-      # output 브랜치는 매번 통째로 바뀌므로 두 결과를 한 폴더에 모아 한 번에 올린다.
-      # dist/ 는 snk 의 Docker 가 root 로 만들어 쓰기가 막혀 있어 새 폴더(public/)에 모은다.
+      # output 브랜치는 매번 통째로 바뀐다 — README 는 output/profile-3d-contrib/*.svg 경로로 읽으므로 폴더째 올린다
       - run: |
           mkdir public
-          cp dist/*.svg public/
           cp -r profile-3d-contrib public/
 
       - uses: crazy-max/ghaction-github-pages@v5
