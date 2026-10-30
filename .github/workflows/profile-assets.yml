@@ -1,4 +1,4 @@
-# README 의 GitHub Activity 칸에 쓰는 3D 잔디 SVG(최근 1년)를 만들어 output 브랜치에 올린다
+# README 의 GitHub Activity 칸에 쓰는 3D 잔디 SVG(가입일 ~ 오늘 전체 기간)를 만들어 output 브랜치에 올린다
 name: Generate profile assets
 
 on:
@@ -14,18 +14,36 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
-      # 결과: ./profile-3d-contrib/profile-*.svg
-      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+      - uses: actions/checkout@v5
+
+      # 3D 잔디 도구는 1년치만 그리므로 Action 대신 소스를 받아 전체 기간용으로 실행한다
+      - uses: actions/checkout@v5
+        with:
+          repository: yoshi389111/github-profile-3d-contrib
+          ref: v0.9.3
+          path: .3d-contrib
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      # 칸 너비가 1년(64칸)에 고정돼 있어, 주 수가 많으면 그만큼 칸을 줄이도록 한 줄 고친 뒤 컴파일한다
+      - name: Build 3D contrib library
+        working-directory: .3d-contrib
+        run: |
+          npm ci --no-audit --no-fund
+          sed -i 's#const dx = width / 64;#const dx = width / Math.max(64, weekcount + 11);#' src/create-3d-contrib.ts
+          grep -q 'Math.max(64, weekcount + 11)' src/create-3d-contrib.ts
+          npx tsc
+
+      # 결과: public/profile-3d-contrib/profile-night-view.svg
+      - name: Generate all-time 3D contributions
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-
-      # output 브랜치는 매번 통째로 바뀐다 — README 는 output/profile-3d-contrib/*.svg 경로로 읽으므로 폴더째 올린다
-      - run: |
-          mkdir public
-          cp -r profile-3d-contrib public/
+        run: node scripts/3d-contrib-all-time.cjs .3d-contrib/dist0/src public/profile-3d-contrib
 
       - uses: crazy-max/ghaction-github-pages@v5
         with:
