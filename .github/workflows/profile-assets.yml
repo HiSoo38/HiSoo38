@@ -1,4 +1,4 @@
-# README 의 GitHub Activity 칸에 쓰는 3D 잔디 SVG 를 가입한 해부터 올해까지 연도별로 만들어 output 브랜치에 올린다
+# README 의 GitHub Activity 칸에 쓰는 3D 잔디 SVG(최근 1년)를 만들어 output 브랜치에 올린다
 name: Generate profile assets
 
 on:
@@ -14,32 +14,18 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
-      # 3D 잔디 Action 은 한 번에 한 해만 그리므로, 코드를 받아 연도마다 직접 실행한다
-      - uses: actions/checkout@v5
-        with:
-          repository: yoshi389111/github-profile-3d-contrib
-          ref: v0.9.3
-          path: .3d-contrib
-
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 24
-
-      # 결과: public/3d-contrib/<연도>/profile-*.svg
-      - name: Generate 3D contributions per year
+      # 결과: ./profile-3d-contrib/profile-*.svg
+      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-        run: |
-          first=$(gh api "users/$USERNAME" --jq '.created_at[:4]')
-          for year in $(seq "$first" "$(date -u +%Y)"); do
-            YEAR=$year node .3d-contrib/dist/index.js
-            mkdir -p "public/3d-contrib/$year"
-            mv profile-3d-contrib/* "public/3d-contrib/$year/"
-          done
+
+      # output 브랜치는 매번 통째로 바뀐다 — README 는 output/profile-3d-contrib/*.svg 경로로 읽으므로 폴더째 올린다
+      - run: |
+          mkdir public
+          cp -r profile-3d-contrib public/
 
       - uses: crazy-max/ghaction-github-pages@v5
         with:

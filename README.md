@@ -130,37 +130,9 @@
 
 ### 📈 GitHub Activity
 
-<!-- 3D 잔디: 워크플로가 output/3d-contrib/<연도>/ 에 해마다 만든다. 새 해가 되면 칸을 하나 추가한다 -->
-<table>
-  <tr>
-    <td width="50%" align="center"><b>2026</b><br />
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2026/profile-night-view.svg" />
-        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2026/profile-season.svg" alt="3D contribution 2026" />
-      </picture>
-    </td>
-    <td width="50%" align="center"><b>2025</b><br />
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2025/profile-night-view.svg" />
-        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2025/profile-season.svg" alt="3D contribution 2025" />
-      </picture>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center"><b>2024</b><br />
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2024/profile-night-view.svg" />
-        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2024/profile-season.svg" alt="3D contribution 2024" />
-      </picture>
-    </td>
-    <td width="50%" align="center"><b>2023</b><br />
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2023/profile-night-view.svg" />
-        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2023/profile-season.svg" alt="3D contribution 2023" />
-      </picture>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/profile-3d-contrib/profile-night-view.svg" alt="3D contribution" />
+</p>
 
 <p align="center">
   <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=HiSoo38&theme=tokyonight" alt="stats" />
