@@ -1,0 +1,41 @@
+# README 의 GitHub Activity 칸에 쓰는 SVG(3D 잔디 · 잔디 먹는 뱀)를 만들어 output 브랜치에 올린다
+name: Generate profile assets
+
+on:
+  schedule:
+    - cron: "0 15 * * *" # 매일 00:00 KST
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # 3D 잔디 — ./profile-3d-contrib/*.svg 로 나온다
+      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      # 잔디 먹는 뱀 — dist/ 로 나온다
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      # output 브랜치는 매번 통째로 바뀌므로 두 결과를 한 폴더에 모아 한 번에 올린다
+      - run: cp -r profile-3d-contrib dist/
+
+      - uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
