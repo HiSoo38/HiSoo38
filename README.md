@@ -131,14 +131,14 @@
 ### 📈 GitHub Activity
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/activity-all-time.svg" alt="all-time activity" />
+</p>
+
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/profile-3d-contrib/profile-night-rainbow.svg" />
     <img src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/profile-3d-contrib/profile-season-animate.svg" alt="3D contribution" />
   </picture>
-</p>
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=HiSoo38&theme=tokyonight" alt="profile details" />
 </p>
 
 <p align="center">
