@@ -135,28 +135,28 @@
   <tr>
     <td width="50%" align="center"><b>2026</b><br />
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2026/profile-night-rainbow.svg" />
-        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2026/profile-season-animate.svg" alt="3D contribution 2026" />
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2026/profile-night-view.svg" />
+        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2026/profile-season.svg" alt="3D contribution 2026" />
       </picture>
     </td>
     <td width="50%" align="center"><b>2025</b><br />
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2025/profile-night-rainbow.svg" />
-        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2025/profile-season-animate.svg" alt="3D contribution 2025" />
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2025/profile-night-view.svg" />
+        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2025/profile-season.svg" alt="3D contribution 2025" />
       </picture>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center"><b>2024</b><br />
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2024/profile-night-rainbow.svg" />
-        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2024/profile-season-animate.svg" alt="3D contribution 2024" />
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2024/profile-night-view.svg" />
+        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2024/profile-season.svg" alt="3D contribution 2024" />
       </picture>
     </td>
     <td width="50%" align="center"><b>2023</b><br />
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2023/profile-night-rainbow.svg" />
-        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2023/profile-season-animate.svg" alt="3D contribution 2023" />
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2023/profile-night-view.svg" />
+        <img width="100%" src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/3d-contrib/2023/profile-season.svg" alt="3D contribution 2023" />
       </picture>
     </td>
   </tr>
