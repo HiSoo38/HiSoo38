@@ -30,12 +30,16 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
-      # output 브랜치는 매번 통째로 바뀌므로 두 결과를 한 폴더에 모아 한 번에 올린다
-      - run: cp -r profile-3d-contrib dist/
+      # output 브랜치는 매번 통째로 바뀌므로 두 결과를 한 폴더에 모아 한 번에 올린다.
+      # dist/ 는 snk 의 Docker 가 root 로 만들어 쓰기가 막혀 있어 새 폴더(public/)에 모은다.
+      - run: |
+          mkdir public
+          cp dist/*.svg public/
+          cp -r profile-3d-contrib public/
 
       - uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
