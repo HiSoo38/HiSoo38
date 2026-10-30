@@ -131,10 +131,6 @@
 ### 📈 GitHub Activity
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HiSoo38/HiSoo38/output/profile-3d-contrib/profile-night-view.svg" alt="3D contribution" />
-</p>
-
-<p align="center">
   <img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=HiSoo38&theme=tokyonight" alt="stats" />
   <img height="180" src="https://streak-stats.demolab.com?user=HiSoo38&hide_border=true&theme=tokyonight" alt="streak" />
 </p>
